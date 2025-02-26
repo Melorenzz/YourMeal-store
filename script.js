@@ -1,6 +1,7 @@
 const cartProductsCount = document.getElementById("cartProductsCount");
 const categories = document.querySelectorAll('.category_item');
 const addBtn = document.querySelectorAll('.add_button');
+const resultPrice = document.getElementById("resultPrice");
 let countItem = 0;
 
 categories[0].style.backgroundColor = '#FFAB08';
@@ -14,25 +15,32 @@ categories.forEach(category => {
 });
 addBtn.forEach(add => {
     add.addEventListener('click', () => {
-        add.style.backgroundColor = '#FFAB08';
+        const productElement = add.closest('.product');
 
+        const productImage = productElement.querySelector('.productImg');
+        const productPrice = productElement.querySelector('.price').innerText;
+        const productName = productElement.querySelector('.product_name').innerText;
+        const productWeight = productElement.querySelector('.product_weight').innerText;
+
+
+        add.style.backgroundColor = '#FFAB08';
         if (add.innerText === '✅') {
 
         } else {
             add.innerText = '✅';
             countItem++;
-
+            resultPrice.innerText = +resultPrice.innerText + +productPrice;
 
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart_item');
             document.querySelector('.cart_items').appendChild(cartItem);
             cartItem.innerHTML = `
                 <div class="cart_item-info">
-                    <div class="cart_item-img"></div>
+                    <img class="cart_item-img" src="${productImage.src}" alt="">
                     <div class="cart_item-details">
-                        <h4>Супер сырный</h4>
-                        <p>512г</p>
-                        <p>550₽</p>
+                        <h4>${productName}</h4>
+                        <p>${productWeight}</p>
+                        <p>${productPrice}</p>
                     </div>
                 </div>
                 <div class="cart_item-count">
@@ -52,12 +60,14 @@ addBtn.forEach(add => {
             plusBtn.addEventListener('click', () => {
                 cartProductsCount.innerText++;
                 itemCount.innerText++;
+                resultPrice.innerText = +resultPrice.innerText + +productPrice;
             });
 
             minusBtn.addEventListener('click', () => {
                 if (itemCount.innerText > 0) {
                     cartProductsCount.innerText--;
                     itemCount.innerText--;
+                    resultPrice.innerText = +resultPrice.innerText - +productPrice;
                     if (itemCount.innerText < 1) {
                         cartItem.remove();
                         add.style.backgroundColor = '';
