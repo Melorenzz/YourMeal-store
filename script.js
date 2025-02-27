@@ -2,15 +2,36 @@ const cartProductsCount = document.getElementById("cartProductsCount");
 const categories = document.querySelectorAll('.category_item');
 const addBtn = document.querySelectorAll('.add_button');
 const resultPrice = document.getElementById("resultPrice");
+const products = document.querySelectorAll('.products_list');
+const productsName = document.getElementById("productsName");
 let countItem = 0;
 
 categories[0].style.backgroundColor = '#FFAB08';
-
 
 categories.forEach(category => {
     category.addEventListener('click', () => {
         categories.forEach(item => { item.style.backgroundColor = '' });
         category.style.backgroundColor = '#FFAB08';
+        productsName.innerText = category.innerText;
+
+        const categoriesMap = {
+            'Burgers': 0,
+            'Snacks': 1,
+            'Hot-dogs': 2,
+            'Combo': 3,
+            'Kebab': 4,
+            'Pizza': 5,
+            'Wok': 6,
+            'Sauce': 8,
+            'Desserts': 9
+        };
+        const categoryIndex = categoriesMap[productsName.innerText];
+
+        if (categoryIndex !== undefined) {
+            products.forEach(item => { item.style.display = 'none'; });
+            products[categoryIndex].style.display = 'flex';
+        }
+
     });
 });
 addBtn.forEach(add => {
