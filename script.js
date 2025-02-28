@@ -4,8 +4,8 @@ const addBtn = document.querySelectorAll('.add_button');
 const resultPrice = document.getElementById("resultPrice");
 const products = document.querySelectorAll('.products_list');
 const productsName = document.getElementById("productsName");
+const deliveryPrice = document.getElementById("deliveryPrice");
 let countItem = 0;
-
 categories[0].style.backgroundColor = '#FFAB08';
 
 categories.forEach(category => {
@@ -36,6 +36,7 @@ categories.forEach(category => {
 });
 addBtn.forEach(add => {
     add.addEventListener('click', () => {
+
         const productElement = add.closest('.product');
 
         const productImage = productElement.querySelector('.productImg');
@@ -78,10 +79,14 @@ addBtn.forEach(add => {
             cartProductsCount.innerText++;
             itemCount.innerText++;
 
+            updateDeliveryPrice()
+
             plusBtn.addEventListener('click', () => {
                 cartProductsCount.innerText++;
                 itemCount.innerText++;
                 resultPrice.innerText = +resultPrice.innerText + +productPrice;
+                updateDeliveryPrice()
+
             });
 
             minusBtn.addEventListener('click', () => {
@@ -94,8 +99,18 @@ addBtn.forEach(add => {
                         add.style.backgroundColor = '';
                         add.innerText = 'Добавить';
                     }
+
                 }
+                updateDeliveryPrice()
             });
+
         }
     });
 });
+function updateDeliveryPrice() {
+    if (+resultPrice.innerText >= 599) {
+        deliveryPrice.innerText = 'Бесплатная доставка';
+    } else {
+        deliveryPrice.innerText = 'Стоимость доставки: 0.5$';
+    }
+}
