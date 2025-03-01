@@ -148,3 +148,17 @@ function checkCartCount() {
     }
 }
 placeOrderFirstBtn.disabled = true;
+
+const deliveryMethods = document.querySelectorAll('input[name="deliveryMethod"]');
+
+deliveryMethods.forEach((radio) => {
+    radio.addEventListener('change', () => {
+        if (document.getElementById('deliveryRadio').checked) {
+            document.getElementById('streetDelivery').style.display = 'flex';
+            document.getElementById('floorDelivery').style.display = 'flex';
+        } else {
+            document.getElementById('streetDelivery').style.display = 'none';
+            document.getElementById('floorDelivery').style.display = 'none';
+        }
+    });
+});

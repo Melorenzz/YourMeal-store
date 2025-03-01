@@ -210,8 +210,10 @@
                     <form>
                         <input class="writeInput" name="userName" placeholder="Your name" type="text">
                         <input class="writeInput" name="phoneNumber" type="tel" placeholder="Your phone number" required>
-                        <label class="radioInput" for="selfPickupRadio"><input name="deliveryMethod" id="selfPickupRadio" type="radio"> Self pickup</label>
+                        <label class="radioInput" for="selfPickupRadio"><input checked name="deliveryMethod" id="selfPickupRadio" type="radio"> Self pickup</label>
                         <label class="radioInput" for="deliveryRadio"><input name="deliveryMethod" id="deliveryRadio" type="radio"> Delivery</label>
+                        <input id="streetDelivery" class="writeInput" name="streetDelivery" type="text" placeholder="Street, house, apartment" required>
+                        <input id="floorDelivery" class="writeInput" name="floorDelivery" type="text" placeholder="Floor" required>
                         <button  class="place_order" type="submit">Place order</button>
                     </form>
                 </div>
