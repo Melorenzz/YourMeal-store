@@ -95,7 +95,7 @@
                         <p>Итого</p>
                         <p><span id="resultPrice">0</span>$</p>
                     </div>
-                    <button type="submit" class="place_order">Оформить заказ</button>
+                    <button id="placeOrderFirstBtn" type="submit" class="place_order">Оформить заказ</button>
                     <div class="delivery">
                         <img src="img/icons/free-icon-delivery-2362252.png" alt="delivery cartoon">
                         <p id="deliveryPrice">Стоимость доставки: 0.5$</p>
@@ -199,6 +199,24 @@
                 </section>
             </div>
         </section>
+        <div id="popups" class="popups">
+            <div id="deliveryPopup" class="delivery_popup">
+                <div class="left_side">
+                    <img src="img/delivery_popup_burger.png" alt="">
+                </div>
+                <div class="right_side">
+                    <img id="closeDeliveryPopup" src="img/closePopup.svg" alt="cross">
+                    <h2>Delivery</h2>
+                    <form>
+                        <input class="writeInput" name="userName" placeholder="Your name" type="text">
+                        <input class="writeInput" name="phoneNumber" type="tel" placeholder="Your phone number" required>
+                        <label class="radioInput" for="selfPickupRadio"><input name="deliveryMethod" id="selfPickupRadio" type="radio"> Self pickup</label>
+                        <label class="radioInput" for="deliveryRadio"><input name="deliveryMethod" id="deliveryRadio" type="radio"> Delivery</label>
+                        <button  class="place_order" type="submit">Place order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 <footer>
     <div class="container">

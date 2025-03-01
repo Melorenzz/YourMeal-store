@@ -5,6 +5,8 @@ const resultPrice = document.getElementById("resultPrice");
 const products = document.querySelectorAll('.products_list');
 const productsName = document.getElementById("productsName");
 const deliveryPrice = document.getElementById("deliveryPrice");
+const deliveryPopup = document.getElementById("deliveryPopup");
+const placeOrderFirstBtn = document.getElementById("placeOrderFirstBtn");
 let countItem = 0;
 categories[0].style.backgroundColor = '#FFAB08';
 
@@ -80,6 +82,7 @@ addBtn.forEach(add => {
             itemCount.innerText++;
 
             updateDeliveryPrice()
+            checkCartCount()
 
             plusBtn.addEventListener('click', () => {
                 cartProductsCount.innerText++;
@@ -101,12 +104,14 @@ addBtn.forEach(add => {
                     }
 
                 }
+                checkCartCount()
                 updateDeliveryPrice()
             });
 
         }
     });
 });
+let popups = document.getElementById('popups');
 function updateDeliveryPrice() {
     if (+resultPrice.innerText >= 599) {
         deliveryPrice.innerText = 'Бесплатная доставка';
@@ -114,3 +119,32 @@ function updateDeliveryPrice() {
         deliveryPrice.innerText = 'Стоимость доставки: 0.5$';
     }
 }
+
+function openPopUpsWindow(){
+    popups.style.display = 'flex';
+}
+function closePopUpsWindow(){
+    popups.style.display = 'none';
+    deliveryPopup.style.display = 'none';
+}
+popups.addEventListener('click', closePopUpsWindow);
+placeOrderFirstBtn.addEventListener('click', () => {
+    openPopUpsWindow();
+    deliveryPopup.style.display = 'flex';
+
+
+})
+document.getElementById('closeDeliveryPopup').addEventListener('click', () => {
+    closePopUpsWindow();
+})
+deliveryPopup.addEventListener('click', (e) => {
+    e.stopPropagation();
+})
+function checkCartCount() {
+    if (cartProductsCount.innerText === '0'){
+        placeOrderFirstBtn.disabled = true;
+    }else{
+        placeOrderFirstBtn.disabled = false;
+    }
+}
+placeOrderFirstBtn.disabled = true;
