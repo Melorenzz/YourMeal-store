@@ -87,7 +87,7 @@ addBtn.forEach(add => {
             plusBtn.addEventListener('click', () => {
                 cartProductsCount.innerText++;
                 itemCount.innerText++;
-                resultPrice.innerText = +resultPrice.innerText + +productPrice;
+                resultPrice.innerText = (+resultPrice.innerText + +productPrice).toFixed(2);
                 updateDeliveryPrice()
 
             });
@@ -96,7 +96,7 @@ addBtn.forEach(add => {
                 if (itemCount.innerText > 0) {
                     cartProductsCount.innerText--;
                     itemCount.innerText--;
-                    resultPrice.innerText = +resultPrice.innerText - +productPrice;
+                    resultPrice.innerText = (+resultPrice.innerText - +productPrice).toFixed(2);
                     if (itemCount.innerText < 1) {
                         cartItem.remove();
                         add.style.backgroundColor = '';
