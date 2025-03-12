@@ -148,11 +148,8 @@ header > img {
   margin-top: 40px;
 }
 
-.categories_container {
-  overflow: hidden;
-}
-
 .categories {
+  overflow-x: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,6 +160,17 @@ header > img {
       -ms-flex-pack: start;
           justify-content: start;
   gap: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0);
+}
+
+.categories::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.categories::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
 }
 
 .category_item {

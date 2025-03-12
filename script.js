@@ -36,6 +36,7 @@ categories.forEach(category => {
 
     });
 });
+
 addBtn.forEach(add => {
     add.addEventListener('click', () => {
 
@@ -84,7 +85,7 @@ addBtn.forEach(add => {
             updateDeliveryPrice()
             checkCartCount()
 
-            plusBtn.addEventListener('click', () => {
+            plusBtn.addEventListener('click', (e) => {
                 cartProductsCount.innerText++;
                 itemCount.innerText++;
                 resultPrice.innerText = (+resultPrice.innerText + +productPrice).toFixed(2);
@@ -179,4 +180,7 @@ cart.addEventListener("click", (e) => {
         allCartItems.style.display = 'none';
         isCartOpen = false;
     }
+})
+document.getElementById("cartItemsStopPropagation").addEventListener('click', (e) => {
+    e.stopPropagation()
 })
