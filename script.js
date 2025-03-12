@@ -101,7 +101,7 @@ addBtn.forEach(add => {
                     if (itemCount.innerText < 1) {
                         cartItem.remove();
                         add.style.backgroundColor = '';
-                        add.innerText = 'Добавить';
+                        add.innerText = 'Add';
                     }
 
                 }
@@ -114,10 +114,10 @@ addBtn.forEach(add => {
 });
 let popups = document.getElementById('popups');
 function updateDeliveryPrice() {
-    if (+resultPrice.innerText >= 599) {
-        deliveryPrice.innerText = 'Бесплатная доставка';
+    if (+resultPrice.innerText > 7) {
+        deliveryPrice.innerText = 'Free delivery';
     } else {
-        deliveryPrice.innerText = 'Стоимость доставки: 0.5$';
+        deliveryPrice.innerText = 'Delivery cost: 0.5$';
     }
 }
 
