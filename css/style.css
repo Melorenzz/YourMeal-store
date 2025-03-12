@@ -84,16 +84,19 @@ body {
 .container {
   max-width: 1290px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 header {
-  padding-bottom: 185px;
+  padding-bottom: 200px;
   position: relative;
 }
 header > img {
   position: absolute;
   width: 100vw;
-  height: 620px;
+  height: 622px;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
 
@@ -143,6 +146,10 @@ header > img {
 
 .first_section {
   margin-top: 40px;
+}
+
+.categories_container {
+  overflow: hidden;
 }
 
 .categories {
@@ -336,6 +343,8 @@ header > img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .products {
@@ -355,7 +364,10 @@ header > img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -522,4 +534,40 @@ footer .container > img {
 }
 .radioInput:nth-of-type(2) {
   margin-top: 12px;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    max-width: 1000px;
+  }
+  .second_section {
+    margin-top: 30px;
+  }
+  .cart {
+    margin-top: 0;
+    position: relative;
+  }
+  .cart_all-items {
+    display: none;
+    position: absolute;
+    background: white;
+    width: 100%;
+    left: 0;
+    padding: 28px 16px;
+  }
+  .products {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 950px) {
+  header > img {
+    height: 720px;
+  }
+  .header_main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
 }

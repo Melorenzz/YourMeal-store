@@ -27,78 +27,83 @@
     <main>
         <section class="first_section">
             <div class="container">
-                <div class="categories">
-                    <div id="burgerCategory" class="category_item">
-                        <img src="./img/icons/Бургеры.png" alt="Burger cartoon">
-                        <p>Burgers</p>
-                    </div>
-                    <div id="snacksCategory" class="category_item">
-                        <img src="./img/icons/Закуски.png" alt="Snacks cartoon">
-                        <p>Snacks</p>
-                    </div>
-                    <div id="hotdogsCategory" class="category_item">
-                        <img src="./img/icons/Хот-доги.png" alt="Hot-dog cartoon">
-                        <p>Hot-dogs</p>
-                    </div>
-                    <div id="comboCategory" class="category_item">
-                        <img src="./img/icons/Комбо.png" alt="Combo cartoon">
-                        <p>Combo</p>
-                    </div>
-                    <div id="kebabCategory" class="category_item">
-                        <img src="./img/icons/Шаурма.png" alt="Kebab cartoon">
-                        <p>Kebab</p>
-                    </div>
-                    <div id="pizzaCategory" class="category_item">
-                        <img src="./img/icons/Пицца.png" alt="Pizza cartoon">
-                        <p>Pizza</p>
-                    </div>
-                    <div id="wokCategory" class="category_item">
-                        <img src="./img/icons/Вок.png" alt="Вок cartoon">
-                        <p>Wok</p>
-                    </div>
-                    <div id="dessertsCategory" class="category_item">
-                        <img src="./img/icons/Десерты.png" alt="Deserts cartoon">
-                        <p>Desserts</p>
-                    </div>
-                    <div id="sauceCategory" class="category_item">
-                        <img src="./img/icons/Соусы.png" alt="Sauce cartoon">
-                        <p>Sauce</p>
+                <div class="categories_container">
+                    <div class="categories">
+                        <div id="burgerCategory" class="category_item">
+                            <img src="./img/icons/Бургеры.png" alt="Burger cartoon">
+                            <p>Burgers</p>
+                        </div>
+                        <div id="snacksCategory" class="category_item">
+                            <img src="./img/icons/Закуски.png" alt="Snacks cartoon">
+                            <p>Snacks</p>
+                        </div>
+                        <div id="hotdogsCategory" class="category_item">
+                            <img src="./img/icons/Хот-доги.png" alt="Hot-dog cartoon">
+                            <p>Hot-dogs</p>
+                        </div>
+                        <div id="comboCategory" class="category_item">
+                            <img src="./img/icons/Комбо.png" alt="Combo cartoon">
+                            <p>Combo</p>
+                        </div>
+                        <div id="kebabCategory" class="category_item">
+                            <img src="./img/icons/Шаурма.png" alt="Kebab cartoon">
+                            <p>Kebab</p>
+                        </div>
+                        <div id="pizzaCategory" class="category_item">
+                            <img src="./img/icons/Пицца.png" alt="Pizza cartoon">
+                            <p>Pizza</p>
+                        </div>
+                        <div id="wokCategory" class="category_item">
+                            <img src="./img/icons/Вок.png" alt="Вок cartoon">
+                            <p>Wok</p>
+                        </div>
+                        <div id="dessertsCategory" class="category_item">
+                            <img src="./img/icons/Десерты.png" alt="Deserts cartoon">
+                            <p>Desserts</p>
+                        </div>
+                        <div id="sauceCategory" class="category_item">
+                            <img src="./img/icons/Соусы.png" alt="Sauce cartoon">
+                            <p>Sauce</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <section class="second_section">
             <div class="container _second">
-                <section class="cart">
+                <section id="cart" class="cart">
                     <div class="cart_title">
                         <h3>Cart</h3>
                         <div id="cartProductsCount" class="products_count">0</div>
                     </div>
-                    <div class="cart_items">
-<!--                        <div class="cart_item">-->
-<!--                            <div class="cart_item-info">-->
-<!--                                <div class="cart_item-img"></div>-->
-<!--                                <div class="cart_item-details">-->
-<!--                                    <h4>Супер сырный</h4>-->
-<!--                                    <p>512г</p>-->
-<!--                                    <p>550₽</p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="cart_item-count">-->
-<!--                                <button id="minusBtn">-</button>-->
-<!--                                <p id="itemCount">0</p>-->
-<!--                                <button id="plusBtn">+</button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                    </div>
-                    <div class="cart_cost">
-                        <p>Total</p>
-                        <p><span id="resultPrice">0</span>$</p>
-                    </div>
-                    <button id="placeOrderFirstBtn" type="submit" class="place_order">Place order</button>
-                    <div class="delivery">
-                        <img src="img/icons/free-icon-delivery-2362252.png" alt="delivery cartoon">
-                        <p id="deliveryPrice">Delivery cost: 0.5$</p>
+                    <div id='allCartItems' class="cart_all-items">
+                        <div class="cart_items">
+                            <!--                        <div class="cart_item">-->
+                            <!--                            <div class="cart_item-info">-->
+                            <!--                                <div class="cart_item-img"></div>-->
+                            <!--                                <div class="cart_item-details">-->
+                            <!--                                    <h4>Супер сырный</h4>-->
+                            <!--                                    <p>512г</p>-->
+                            <!--                                    <p>550₽</p>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="cart_item-count">-->
+                            <!--                                <button id="minusBtn">-</button>-->
+                            <!--                                <p id="itemCount">0</p>-->
+                            <!--                                <button id="plusBtn">+</button>-->
+                            <!--                            </div>-->
+                            <!--                        </div>-->
+                        </div>
+                        <div class="cart_cost">
+                            <p>Total</p>
+                            <p><span id="resultPrice">0</span>$</p>
+                        </div>
+                        <button id="placeOrderFirstBtn" type="submit" class="place_order">Place order</button>
+                        <div class="delivery">
+                            <img src="img/icons/free-icon-delivery-2362252.png" alt="delivery cartoon">
+                            <p id="deliveryPrice">Delivery cost: 0.5$</p>
+                        </div>
                     </div>
                 </section>
                 <section class="products">
@@ -108,42 +113,42 @@
                             <img class="productImg" src="img/burgers/meat%20bomb.png" alt="">
                             <p class="price">8</p>
                             <p class="product_name">Meat bomb</p>
-                            <p class="product_weight">520г</p>
+                            <p class="product_weight">520g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/burgers/super%20cheesy.png" alt="">
                             <p class="price">6</p>
                             <p class="product_name">Super cheesy</p>
-                            <p class="product_weight">512г</p>
+                            <p class="product_weight">512g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/burgers/satisfying.png" alt="">
                             <p class="price">7</p>
                             <p class="product_name">Сытный</p>
-                            <p class="product_weight">580г</p>
+                            <p class="product_weight">580g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/burgers/hard%20kick.png" alt="">
                             <p class="price">5.50</p>
                             <p class="product_name">Heavy hit</p>
-                            <p class="product_weight">470г</p>
+                            <p class="product_weight">470g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/burgers/timeless%20classic.png" alt="">
                             <p class="price">5</p>
                             <p class="product_name">Timeless classic</p>
-                            <p class="product_weight">450г</p>
+                            <p class="product_weight">450g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/burgers/italic.png" alt="">
                             <p class="price">6</p>
                             <p class="product_name">Italian</p>
-                            <p class="product_weight">510г</p>
+                            <p class="product_weight">510g</p>
                             <button class="add_button">Add</button>
                         </div>
 
@@ -153,21 +158,21 @@
                             <img class="productImg" src="img/snacks/nachos.png" alt="">
                             <p class="price">3</p>
                             <p class="product_name">Nachos</p>
-                            <p class="product_weight">220г</p>
+                            <p class="product_weight">220g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/snacks/french%20fries.png" alt="">
                             <p class="price">2.80</p>
                             <p class="product_name">French fries</p>
-                            <p class="product_weight">180г</p>
+                            <p class="product_weight">180g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/snacks/onion%20rings.png" alt="">
                             <p class="price">2.50</p>
                             <p class="product_name">Onion rings</p>
-                            <p class="product_weight">160г</p>
+                            <p class="product_weight">160g</p>
                             <button class="add_button">Add</button>
                         </div>
                     </div>
@@ -176,21 +181,21 @@
                             <img class="productImg" src="img/snacks/homemade%20hot%20dog.png" alt="">
                             <p class="price">3</p>
                             <p class="product_name">Homemade hot dog</p>
-                            <p class="product_weight">250г</p>
+                            <p class="product_weight">250g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/snacks/spicy%20hot%20dog.png" alt="">
                             <p class="price">2.80</p>
                             <p class="product_name">Spicy hot dog</p>
-                            <p class="product_weight">245г</p>
+                            <p class="product_weight">245g</p>
                             <button class="add_button">Add</button>
                         </div>
                         <div class="product">
                             <img class="productImg" src="img/snacks/classic%20hot%20dog.png" alt="">
                             <p class="price">2.50</p>
                             <p class="product_name">Classic hot dog</p>
-                            <p class="product_weight">215г</p>
+                            <p class="product_weight">215g</p>
                             <button class="add_button">Add</button>
                         </div>
                     </div>

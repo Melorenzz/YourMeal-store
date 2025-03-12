@@ -162,3 +162,21 @@ deliveryMethods.forEach((radio) => {
         }
     });
 });
+
+const allCartItems = document.getElementById("allCartItems");
+const cart = document.getElementById("cart");
+
+let isCartOpen = false;
+cart.addEventListener("click", (e) => {
+    if(window.innerWidth > 1279){
+        return
+    }
+    if(!isCartOpen && window.innerWidth <= 1279){
+        allCartItems.style.display = 'block';
+        isCartOpen = true;
+
+    }else{
+        allCartItems.style.display = 'none';
+        isCartOpen = false;
+    }
+})

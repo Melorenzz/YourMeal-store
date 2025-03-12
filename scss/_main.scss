@@ -6,14 +6,16 @@ body{
 .container{
   max-width: 1290px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 header{
-  padding-bottom: 185px;
+  padding-bottom: 200px;
   position: relative;
   > img{
     position: absolute;
     width: 100vw;
-    height: 620px;
+    height: 622px;
+    object-fit: cover;
     z-index: -1;
   }
 }
@@ -51,6 +53,10 @@ header{
 
 .first_section{
   margin-top: 40px;
+
+}
+.categories_container{
+  overflow: hidden;
 }
 .categories{
   display: flex;
@@ -179,6 +185,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .products{
   max-width: 960px;
@@ -192,7 +199,8 @@ header{
   margin-top: 24px;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 24px;
   flex-wrap: wrap;
 }
 .product{
@@ -328,8 +336,42 @@ footer{
   }
 }
 
+@media (max-width: 1279px) {
+  .container{
+    max-width: 1000px;
+  }
+  .second_section{
+    margin-top: 30px;
+  }
+  .cart{
+    margin-top: 0;
+    position: relative;
+  }
+  .cart_all-items{
+    display: none;
+    position: absolute;
+    background: white;
+    width: 100%;
+    left: 0;
+    padding: 28px 16px;
+  }
+  .products{
+    margin-top: 30px;
+  }
 
+}
 
+@media (max-width: 950px) {
+  header{
+    > img{
+      height: 720px;
+    }
+  }
+  .header_main{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
 
 
 
