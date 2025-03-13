@@ -43,7 +43,7 @@ addBtn.forEach(add => {
         const productElement = add.closest('.product');
 
         const productImage = productElement.querySelector('.productImg');
-        const productPrice = productElement.querySelector('.price').innerText;
+        const productPrice = productElement.querySelector('.price').innerText.slice(0, -1);
         const productName = productElement.querySelector('.product_name').innerText;
         const productWeight = productElement.querySelector('.product_weight').innerText;
 
