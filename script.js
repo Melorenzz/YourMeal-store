@@ -37,6 +37,9 @@ categories.forEach(category => {
     });
 });
 
+
+
+
 addBtn.forEach(add => {
     add.addEventListener('click', () => {
 
@@ -184,3 +187,4 @@ cart.addEventListener("click", (e) => {
 document.getElementById("cartItemsStopPropagation").addEventListener('click', (e) => {
     e.stopPropagation()
 })
+
